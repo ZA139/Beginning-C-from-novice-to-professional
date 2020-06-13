@@ -1,0 +1,55 @@
+#include<stdio.h>
+
+int main(void)
+
+{
+
+    float sum,average=0;
+
+    int grades[3][3],k,i,j;
+
+    
+
+    for(i=0;i<=2;i++)
+
+    {
+
+                     printf("Input the grades of %d%s student",i+1,i+1==1?"st":(i+1==2?"nd":"rd"));
+
+    
+
+    for(j=0;j<=2;j++)
+
+    scanf("%d",&grades[i][j]);
+
+} 
+
+ printf("\t    Sum\t\tGrades"); 
+
+ for(k=0;k<=2;k++)
+
+ {
+
+    printf("\n%d%s student:",k+1,k+1==1?"st":(k+1==2?"nd":"rd"));
+
+    for(j=0;j<=2;j++)
+
+    {
+
+                     sum+=grades[k][j];
+
+    }
+
+    average=sum/3;
+
+    printf("%.2f\t%.2f",sum,average);
+
+ }
+
+    getchar();
+
+    getchar();
+
+    return 0;
+
+}
