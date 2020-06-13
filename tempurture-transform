@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+#include<ctype.h>
+
+int main(void)
+
+{
+
+	char type = 0;
+
+	double tempurture, transform_tempurture = 0;
+
+
+
+	printf("Input your type of tempurture.(c for Celsius£¬f for Fahrenheit)");
+
+	scanf("%c", &type);
+
+	printf("Input your %s degrees u wanna transform", tolower(type) == 'c' ? "Celsius" : "Fahrenheit");
+
+	scanf("%lf", &tempurture);
+
+
+
+	if (tolower(type)=='c')
+
+	{
+
+		transform_tempurture = tempurture * 1.8 + 32;
+
+	}
+
+	else
+
+	{
+
+		transform_tempurture = ((tempurture - 32) * 5) / 9;
+
+	}
+
+	printf("The %.1lf in %s equal to %.1lf in %s",tempurture,tolower(type)=='c'?"Celsius":"Fahrenheit",transform_tempurture,tolower(type)=='c'?"Fahrenheit":"Celsius");
+
+	getchar();
+
+	getchar();
+
+	return 0;
+
+}
