@@ -1,0 +1,63 @@
+#include<stdio.h>
+
+int main(void)
+
+{
+
+    int chosen=20;
+
+    int guess=0;
+
+    int chance=3;
+
+    
+
+    printf("\nThis is a guessing game!");
+
+    printf("\nI have chosen a number between 1 and 30"
+
+                                                     "which you must guess.\n");
+
+    
+
+    for(;chance >0;--chance)
+
+    {
+
+                printf("\nYou have %d tr%s left.",chance,chance==1?"y":"ies");
+
+                printf("\nEnter a guess:");
+
+                scanf("%d",&guess);
+
+                
+
+                if(guess==chosen)
+
+                {
+
+                    printf("\n Congratulations!You got it!\n");
+
+                    system("pause");
+
+                    return 0;
+
+                }
+
+                else if(guess<1||guess>30)
+
+                    printf("\nI said the number is between 1 and 30.\n");
+
+                else
+
+                    printf("\nSorry,%d is wrong. My number is %s than that.\n",guess,guess<chosen?"greater":"less");
+
+     }            
+
+printf("\nYou have 3 tries and field.The number was %d.\n",chosen);
+
+system("pause");
+
+return 0;
+
+}
